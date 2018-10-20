@@ -2,8 +2,9 @@
 
 namespace DAO\Teste;
 
-class Teste {
-    
+class Teste
+{
+
     public function exibe()
     {
         echo "testesadasdhasg";
