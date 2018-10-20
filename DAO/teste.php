@@ -1,6 +1,6 @@
 <?php
 
-namespace DAO\Teste;
+namespace DAO;
 
 class Teste
 {

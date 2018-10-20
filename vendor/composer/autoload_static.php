@@ -4,19 +4,20 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit39e43681a0a3f41b3078579ec7850a3f
+class ComposerStaticIniteb0548d7b962019ec983dcda2b63253e
 {
     public static $classMap = array (
-        'ComposerAutoloaderInit39e43681a0a3f41b3078579ec7850a3f' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'ComposerAutoloaderIniteb0548d7b962019ec983dcda2b63253e' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\ComposerStaticInit39e43681a0a3f41b3078579ec7850a3f' => __DIR__ . '/..' . '/composer/autoload_static.php',
-        'DAO\\Teste\\Teste' => __DIR__ . '/../..' . '/DAO/teste.php',
+        'Composer\\Autoload\\ComposerStaticIniteb0548d7b962019ec983dcda2b63253e' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'Conection\\Conexao' => __DIR__ . '/../..' . '/conection/Conexao.php',
+        'DAO\\Teste' => __DIR__ . '/../..' . '/DAO/teste.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit39e43681a0a3f41b3078579ec7850a3f::$classMap;
+            $loader->classMap = ComposerStaticIniteb0548d7b962019ec983dcda2b63253e::$classMap;
 
         }, null, ClassLoader::class);
     }

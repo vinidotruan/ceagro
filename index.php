@@ -1,7 +1,8 @@
 <?php
+
 require "vendor/autoload.php";
+use DAO\Teste;
+use Conection\Conexao;
 
-use DAO\Teste\Teste;
-
-$teste = new Teste;
-$teste->exibe();
+$mostra = new Conexao();
+$teste = $mostra->a();

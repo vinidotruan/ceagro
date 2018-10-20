@@ -6,8 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'ComposerAutoloaderInit39e43681a0a3f41b3078579ec7850a3f' => $vendorDir . '/composer/autoload_real.php',
+    'ComposerAutoloaderIniteb0548d7b962019ec983dcda2b63253e' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
-    'Composer\\Autoload\\ComposerStaticInit39e43681a0a3f41b3078579ec7850a3f' => $vendorDir . '/composer/autoload_static.php',
-    'DAO\\Teste\\Teste' => $baseDir . '/DAO/teste.php',
+    'Composer\\Autoload\\ComposerStaticIniteb0548d7b962019ec983dcda2b63253e' => $vendorDir . '/composer/autoload_static.php',
+    'Conection\\Conexao' => $baseDir . '/conection/Conexao.php',
+    'DAO\\Teste' => $baseDir . '/DAO/teste.php',
 );
