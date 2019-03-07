@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
     <title>Contrato</title>
 </head>
 <style>
@@ -67,7 +68,12 @@
         width:400px;
         text-align:left;
 		overflow: auto;
+        word-wrap: break-word;
     }
+    .nomeComprador{
+        width:350px;
+    }
+
 </style>
 
 <body>
@@ -92,8 +98,8 @@
         <div class="vendedor">
             <table>
                 <tr>
-                    <td class="halfSize">Vendedor:
-                        <?= $contrato->unidadeVendedor()->razao_social ?></td>
+                    <td class="halfSize">
+                    <div class="nomeComprador">Vendedor: <?= $contrato->unidadeVendedor()->razao_social ?></div></td>
                         <td class="ac" > A/C:
                     <?= $contrato->assinatura_vendedor ?></td>
                 </tr>
@@ -127,8 +133,8 @@
         <div class="comprador">
             <table>
                 <tr>
-                    <td class="halfSize">Comprador:
-                        <?= $contrato->unidadeComprador()->razao_social ?></td>
+                    <td class="halfSize">
+                        <div class="nomeComprador">Comprador: <?= $contrato->unidadeComprador()->razao_social ?></div></td>
                         <td class="ac">A/C:
                         <?= $contrato->assinatura_comprador ?></td>
                 </tr>
