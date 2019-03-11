@@ -59,14 +59,13 @@
         padding-left:60%;
     }
     .ac{
-	   width: 30%;
-	   overflow: auto;
+	   width: 30vw;
 	   text-align:left;
     }
     .halfSize{
         width:400px;
         text-align:left;
-		overflow: auto;
+		/* overflow: auto; */
     }
 </style>
 
@@ -92,8 +91,8 @@
         <div class="vendedor">
             <table>
                 <tr>
-                    <td class="halfSize">Vendedor:
-                        <?= $contrato->unidadeVendedor()->razao_social ?></td>
+                    <td class="halfSize" style="word-break: break-all;">Vendedor:
+                        <?= $contrato->unidadeVendedor()->razao_social ?>SDAIHAOSIJDOKLASDJHDAS</td>
                         <td class="ac" > A/C:
                     <?= $contrato->assinatura_vendedor ?></td>
                 </tr>
