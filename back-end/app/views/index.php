@@ -63,11 +63,13 @@
     }
     .ac{
         text-align:left;
+        vertical-align: top;
+
     }
     .halfSize{
         text-align:left;
-        width: 35rem;
-        word-wrap: break-word !important; 
+        width: 30rem;
+        word-wrap: break-word !important;
     }
 </style>
 
