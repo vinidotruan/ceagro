@@ -59,14 +59,15 @@
         padding-left:60%;
     }
     .ac{
-	   width: 30%;
-	   overflow: auto;
-	   text-align:left;
+        text-align:left;
     }
     .halfSize{
-        width:400px;
         text-align:left;
-		overflow: auto;
+        width: 35rem;
+        word-wrap: break-word !important; 
+    }
+    table {
+        width: 567px !important;
     }
 
     .table {

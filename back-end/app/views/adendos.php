@@ -23,6 +23,10 @@
         margin-right: 3cm;
     }
 
+    table {
+        width: 567px !important;
+    }
+
     .data, .assinatura {
         float: right;
     }
@@ -59,14 +63,12 @@
         padding-left:60%;
     }
     .ac{
-	   width: 30%;
-	   overflow: auto;
-	   text-align:left;
+        text-align:left;
     }
     .halfSize{
-        width:400px;
         text-align:left;
-		overflow: auto;
+        width: 35rem;
+        word-wrap: break-word !important; 
     }
 
     .table {
@@ -99,7 +101,7 @@
             <table>
                 <tr>
                     <td class="halfSize">Vendedor:
-                        <?= $adendo->contrato()->unidadeVendedor()->razao_social ?></td>
+                        <?= $adendo->contrato()->unidadeVendedor()->razao_social?></td>
                         <td class="ac" > A/C:
                     <?= $adendo->contrato()->assinatura_vendedor ?></td>
                 </tr>

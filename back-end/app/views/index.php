@@ -23,15 +23,18 @@
         margin-right: 3cm;
     }
 
-    .data, .assinatura {
-        float: right;
+    table {
+        width: 567px !important;
     }
-    .assinatura {
-        margin-right: 10%;
-    }
+
+    .data,
+    .assinatura {float: right;}
+
+    .assinatura {margin-right: 10%;}
     .confirmacao,
     .vendedor {
         margin-top: 3%;
+        word-break: break-all;
     }
     .nome {
         float: left;
@@ -59,13 +62,12 @@
         padding-left:60%;
     }
     .ac{
-	   width: 30vw;
-	   text-align:left;
+        text-align:left;
     }
     .halfSize{
-        width:400px;
         text-align:left;
-		/* overflow: auto; */
+        width: 35rem;
+        word-wrap: break-word !important; 
     }
 </style>
 
@@ -91,9 +93,9 @@
         <div class="vendedor">
             <table>
                 <tr>
-                    <td class="halfSize" style="word-break: break-all;">Vendedor:
-                        <?= $contrato->unidadeVendedor()->razao_social ?>SDAIHAOSIJDOKLASDJHDAS</td>
-                        <td class="ac" > A/C:
+                    <td class="halfSize">Vendedor:
+                        <?= $contrato->unidadeVendedor()->razao_social ?></td>
+                        <td class="ac"> A/C:
                     <?= $contrato->assinatura_vendedor ?></td>
                 </tr>
                
@@ -123,14 +125,15 @@
         </div>
     </section>
     <section>
-        <div class="comprador">
+        <div class="vendedor">
             <table>
                 <tr>
                     <td class="halfSize">Comprador:
-                        <?= $contrato->unidadeComprador()->razao_social ?></td>
-                        <td class="ac">A/C:
-                        <?= $contrato->assinatura_comprador ?></td>
+                        <?= $contrato->unidadeComprador->razao_social?></td>
+                        <td class="ac"> A/C:
+                    <?= $contrato->assinatura_comprador ?></td>
                 </tr>
+               
                 <tr>
                     <td>
                         <?= ($contrato->unidadeComprador->endereco->rua && strlen($contrato->unidadeComprador->endereco->rua) > 0) ? "{$contrato->unidadeComprador->endereco->rua}, " : 'Não cadastrada, ' ?>
@@ -147,12 +150,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td >
                     Inscrição Estadual:
                         <?= ($contrato->unidadeComprador->inscricao_estadual && strlen($contrato->unidadeComprador->inscricao_estadual) > 0) ? $contrato->unidadeComprador->inscricao_estadual : "-" ?>
                     </td>
-                
-                        </tr>
+                    
+                </tr>
             </table>
         </div>
     </section>
