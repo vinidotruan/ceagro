@@ -44,7 +44,7 @@ class ComposerStaticInit7af411bac7756e8562419bf7dd0e78b2
 
     public static $classMap = array (
         'App\\Controllers\\AdaptacaoController' => __DIR__ . '/../..' . '/app/controllers/AdaptacaoController.php',
-        'App\\Controllers\\AdendosController' => __DIR__ . '/../..' . '/app/controllers/AdendosController.php',
+        'App\\Controllers\\AdendosController' => __DIR__ . '/../..' . '/AdendoController.php',
         'App\\Controllers\\CfopsController' => __DIR__ . '/../..' . '/app/controllers/CfopsControllers.php',
         'App\\Controllers\\ClientesController' => __DIR__ . '/../..' . '/app/controllers/ClientesController.php',
         'App\\Controllers\\ContasBancariasController' => __DIR__ . '/../..' . '/app/controllers/ContasBancariasController.php',
@@ -54,7 +54,9 @@ class ComposerStaticInit7af411bac7756e8562419bf7dd0e78b2
         'App\\Controllers\\EnderecosController' => __DIR__ . '/../..' . '/app/controllers/EnderecosController.php',
         'App\\Controllers\\FixacoesController' => __DIR__ . '/../..' . '/app/controllers/FixacoesController.php',
         'App\\Controllers\\PDF\\AdendosController' => __DIR__ . '/../..' . '/app/controllers/PDF/AdendosController.php',
+        'App\\Controllers\\PDF\\ContratosAtuaisController' => __DIR__ . '/../..' . '/app/controllers/PDF/ContratosAtuaisController.php',
         'App\\Controllers\\PDF\\ContratosController' => __DIR__ . '/../..' . '/app/controllers/PDF/ContratosController.php',
+        'App\\Controllers\\PDF\\ContratosFuturosController' => __DIR__ . '/../..' . '/app/controllers/PDF/ContratosFuturosController.php',
         'App\\Controllers\\PDF\\FixacoesController' => __DIR__ . '/../..' . '/app/controllers/PDF/FixacoesController.php',
         'App\\Controllers\\ProdutosController' => __DIR__ . '/../..' . '/app/controllers/ProdutosController.php',
         'App\\Controllers\\Teste' => __DIR__ . '/../..' . '/app/controllers/teste.php',
@@ -72,6 +74,8 @@ class ComposerStaticInit7af411bac7756e8562419bf7dd0e78b2
         'App\\Models\\ContaBancaria' => __DIR__ . '/../..' . '/app/models/ContaBancaria.php',
         'App\\Models\\Contato' => __DIR__ . '/../..' . '/app/models/Contato.php',
         'App\\Models\\Contrato' => __DIR__ . '/../..' . '/app/models/Contrato.php',
+        'App\\Models\\ContratoAtual' => __DIR__ . '/../..' . '/app/models/ContratoAtual.php',
+        'App\\Models\\ContratoFuturo' => __DIR__ . '/../..' . '/app/models/ContratoFuturo.php',
         'App\\Models\\Endereco' => __DIR__ . '/../..' . '/app/models/Endereco.php',
         'App\\Models\\Fixacao' => __DIR__ . '/../..' . '/app/models/Fixacao.php',
         'App\\Models\\Model' => __DIR__ . '/../..' . '/app/models/Model.php',

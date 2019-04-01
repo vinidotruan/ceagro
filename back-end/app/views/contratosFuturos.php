@@ -82,20 +82,19 @@
         <?php
             setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
             date_default_timezone_set('America/Sao_Paulo');
-            echo utf8_encode(strftime('%d de %B de %Y', strtotime($contrato->data_cadastro)));
         ?></strong>
         </div>
     </header>
     <section>
-        <div class="confirmacao">
-            <span>Confirmação número: <strong><?= $contrato->numero_confirmacao ?></strong></span>
-        </div>
     </section>
     <section>
         <div class="vendedor">
             <table>
                 <tr>
-                    <td>Hello World!</td>
+                    <td><?php foreach($contrato as $campo){
+                        $id = $campo->id;
+                    } 
+                    echo $id;?></td>
                 </tr>
             </table>
     </section>
