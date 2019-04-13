@@ -1,5 +1,5 @@
 <?php include 'partials/cabecalho.html' ?>
-<body class="hold-transition skin-blue sidebar-mini" onload="buscarContratos()">
+<body class="hold-transition skin-blue sidebar-mini" >
 	<div class="wrapper">
 	<?php include "partials/header.html"; ?>
 	<?php include "partials/menu.html"; ?>
@@ -76,5 +76,5 @@
 		<div class="control-sidebar-bg"></div>
 	</div>
 	<?php include 'partials/imports.html' ?>
-	<script src="public/assets/js/contratosLista.js"></script>
+	<script type="module" src="public/assets/js/contratosLista.js"></script>
 	<?php include 'partials/rodape.html' ?>
