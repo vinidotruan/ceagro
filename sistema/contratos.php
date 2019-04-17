@@ -480,8 +480,8 @@
 				Copyright © 2019 CEAGRO - Todos os Direitos Reservados. Feito com <img src="http://dom.com.vc/dom.com.vc.gif" alt="DOM Creative Consulting" height="20" width="20"> por <a href="https://dom.com.vc">DOM</a>
 			</footer>
 		<?php include 'partials/imports.html' ?>
-		<script src="public/assets/js/comprador_vendedor.js"></script>
-		<script src="public/assets/js/contratos.js"></script>
+		<script type="module" src="public/assets/js/comprador_vendedor.js"></script>
+		<script type="module" src="public/assets/js/contratos.js"></script>
 		<script src="adminlte/plugins/iCheck/icheck.min.js"></script>
 		<script>
 		$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
@@ -499,11 +499,6 @@
 				format: 'DD/MM/YYYY'
 			}
 		});
-		// $('#reservation2').datepicker({
-		// 		locale: {
-		// 		format: 'DD/MM/Y	YYY'
-		// 	}
-		// });
 		$.fn.datepicker.dates['pt'] = {
 			days: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
 			daysShort: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"],

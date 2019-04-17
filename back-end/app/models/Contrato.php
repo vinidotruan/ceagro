@@ -52,7 +52,7 @@ class Contrato extends Model
     public $atual = 1460;
 
     protected static $table = "contratos";
-
+    
 
     public function __construct()
     {

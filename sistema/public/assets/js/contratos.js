@@ -1,3 +1,13 @@
+import * as variables from "../../../environments/variables";
+
+$.ajaxSetup({
+  headers: {
+    "Content-Type": "application/json",
+    "X-Requested-With": "XMLHttpRequest",
+    Accept: "application/json"
+  }
+});
+
 $(document).ready(() => {
   contrato = JSON.parse(localStorage.getItem("contrato"));
   $(".select2").select2();
@@ -91,8 +101,8 @@ function temFixacao() {
  * PRODUTOS
  */
 function buscarProdutos() {
-  $.get("../back-end/produtos").done(response => {
-    produtos = JSON.parse(response);
+  $.get(`${variables.variable()[0].url}produtos`).done(response => {
+    produtos = response;
     popularProdutos(produtos);
   });
 }
@@ -134,8 +144,8 @@ function popularDescricao(produto) {
  * UNIDADES DE MEDIDA
  */
 function buscarUnidadesDeMedidas() {
-  $.get("../back-end/unidades-medidas").done(response =>
-    popularUnidadesMedidades(JSON.parse(response))
+  $.get(`${variables.variable()[0].url}unidades-medidas`).done(
+    unidadesMedidas => popularUnidadesMedidades(unidadesMedidas)
   );
 }
 

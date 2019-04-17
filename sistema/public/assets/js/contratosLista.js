@@ -1,4 +1,17 @@
+import * as variables from "../../../environments/variables";
+
+$.ajaxSetup({
+  headers: {
+    "Content-Type": "application/json",
+    "X-Requested-With": "XMLHttpRequest",
+    Accept: "application/json"
+  }
+});
+
 var contratoId = null;
+var contratos;
+var table;
+
 $(document).ready(() => {
   buscarContratos();
 });
@@ -11,8 +24,8 @@ $("#deletarContrato").on("click", () => {
 $;
 
 function buscarContratos() {
-  $.get(``).done(response => {
-    contratos = JSON.parse(response);
+  $.get(`${variables.variable()[0].url}contratos`).done(response => {
+    contratos = response;
     popularPesquisa(contratos, () => {
       $(".overlay").remove();
       table = $("#contratos").DataTable({ order: [0, "desc"] });
@@ -27,10 +40,10 @@ function popularPesquisa(contratos, callback = null) {
             <td class="item" id="${contrato.id}">${
       contrato.numero_confirmacao
     }</td>
-            <td class="item" id="${contrato.id}">${contrato.unidadeComprador
-      .razao_social || "teste"}</td>
+            <td class="item" id="${contrato.id}">
+            ${contrato.unidade_comprador.razao_social}</td>
             <td class="item" id="${contrato.id}">${
-      contrato.unidadeVendedor.razao_social
+      contrato.unidade_vendedor.razao_social
     }</td>
             <td class="item" id="${contrato.id}">${contrato.produto.nome}</td>
             <td class="download" style="text-align:center" id="${contrato.id}">
@@ -53,7 +66,6 @@ function popularPesquisa(contratos, callback = null) {
     irParaContratos(this.id);
   });
   $(`#contratos .download`).on("click", function(event) {
-    console.log(event);
     abrirContrato(event.target.id);
   });
   $(`#contratos .delete`).on("click", function() {
@@ -67,12 +79,12 @@ function selecionarContrato(ctId) {
 }
 
 function abrirContrato(ctId) {
-  window.open(`../back-end/pdfs/contratos/${ctId}`, "_blank");
+  window.open(`${variables.variable()[0].url}pdfs/contratos/${ctId}`, "_blank");
 }
 
 function irParaContratos(contrato) {
-  $.get(`../back-end/contratos/${contrato}/`, response => {
-    contrato = JSON.parse(response);
+  $.get(`${variables.variable()[0].url}contratos/${contrato}`, response => {
+    contrato = response;
     localStorage.setItem("contrato", JSON.stringify(contrato));
     $(location).attr("href", "contratos.php");
   });
@@ -81,7 +93,7 @@ function irParaContratos(contrato) {
 function deletarContrato() {
   mostrarModal();
   $.ajax({
-    url: `../back-end/contratos/${contratoId}`,
+    url: `${variables.variable()[0].url}contratos/${contratoId}`,
     type: "DELETE"
   })
     .done(() =>
